@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Gestión de usuarios-->
+    <item
+        android:id="@+id/nav_users"
+        android:icon="@drawable/ic_users"
+        android:title=""/>
+
+    <!--Gestión de categorías-->
+    <item
+        android:id="@+id/nav_categories"
+        android:icon="@drawable/ic_categories"
+        android:title=""/>
+
+    <!--Gestión de productos-->
+    <item
+        android:id="@+id/nav_products"
+        android:icon="@drawable/ic_products"
+        android:title=""/>
+
+    <!--Copias de seguridad-->
+    <item
+        android:id="@+id/nav_backup"
+        android:icon="@drawable/ic_backup"
+        android:title=""/>
+
+</menu>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="85dp"
+    android:fillViewport="true"
+    tools:context=".ui.cart.CartFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55sp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TitleFragment"
+            android:layout_width="wrap_content"
+            android:text="@string/cart" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_info"
+            style="@style/InfoTextView"
+            android:text="@string/cart_info_no_products"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_cart_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_cart_product" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_cart_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:background="@drawable/custom_linear_layout"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/subtotal_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/mulish"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                tools:text="@string/tv_subtotal_amount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shipping_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                tools:text="@string/tv_shipping" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Info precios -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/price_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="23dp"
+            android:drawablePadding="5dp"
+            android:text="@string/tv_price_info"
+            android:textStyle="italic"
+            android:visibility="gone"
+            app:drawableLeftCompat="@drawable/ic_info" />
+
+        <!-- Botón "Continuar comprando"-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_keep_buying"
+            style="@style/SecondaryButton"
+            android:text="@string/tv_keep_buying"
+            android:textSize="17sp" />
+
+        <!-- Botón "Tramitar pedido"-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_process_order"
+            style="@style/PrimaryButton"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="7dp"
+            android:text="@string/btn_process_order"
+            android:visibility="gone" />
+
+        <!-- Botón "Vaciar carro" -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_clear_cart"
+            style="@style/PrimaryButton"
+            android:layout_marginBottom="7dp"
+            android:backgroundTint="@color/errorColor"
+            android:text="@string/btn_clear_cart"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

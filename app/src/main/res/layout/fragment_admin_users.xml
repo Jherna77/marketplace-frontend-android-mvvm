@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="85dp"
+    android:fillViewport="true"
+    tools:context=".ui.user.admin.AdminUsersFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TitleFragment"
+            android:layout_width="wrap_content"
+            android:text="@string/users" />
+
+        <!--  Filtrar -->
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/btn_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/filter"
+            android:src="@drawable/ic_filter" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <!-- Filtrar por tipo de usuario -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/user_role_et"
+                android:textSize="14sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_roles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <!-- Todos -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_all_roles"
+                    style="@style/ChipButton"
+                    android:checked="true"
+                    android:tag="@string/tag_all"
+                    android:text="@string/filter_all" />
+
+                <!-- Clientes -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_customer"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_customer"
+                    android:text="@string/filter_customer" />
+
+                <!-- Tiendas -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_shop"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_shop"
+                    android:text="@string/filter_shop" />
+
+                <!-- Administradores -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_admin"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_admin"
+                    android:text="@string/filter_admin" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Filtrar por estado -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/filter_state"
+                android:textSize="14sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_statuses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <!-- Todos -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_all_statuses"
+                    style="@style/ChipButton"
+                    android:checked="true"
+                    android:tag="@string/tag_all"
+                    android:text="@string/filter_all" />
+
+                <!-- Habilitados -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_enabled"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_enabled"
+                    android:text="@string/filter_enabled" />
+
+                <!-- Deshabilitados -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_disabled"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_disabled"
+                    android:text="@string/filter_disabled" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Ordenar ascendente / descendente -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/filter_order"
+                android:textSize="14sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <!-- Ascendente -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_ascending"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_ascending"
+                    android:text="@string/filter_ascending" />
+
+                <!-- Descendente -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_descending"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_descending"
+                    android:text="@string/filter_descending" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--  Lista de usuarios -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_users"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_no_results"
+            style="@style/InfoTextView"
+            android:text="@string/filter_info_no_results"
+            android:visibility="gone" />
+
+        <!-- Floating Action Button-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_fab"
+            style="@style/AddFAB"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="60dp"
+            android:contentDescription="@string/add_user" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

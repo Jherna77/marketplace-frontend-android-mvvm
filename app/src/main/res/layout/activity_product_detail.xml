@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.product.detail.ProductDetailActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_app" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_product_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="17dp">
+
+        <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <!--Nombre del producto-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish"
+                android:textColor="@color/bazaar"
+                android:textSize="19sp"
+                tools:text="@string/product_name_et" />
+
+            <!--Nombre de la tienda que vende el producto -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/product_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_name"
+                android:fontFamily="@font/mulish"
+                android:textSize="15sp"
+                tools:text="@string/tv_product_shop" />
+
+            <!-- Unidades vendidas -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_sold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_shop"
+                android:fontFamily="@font/mulish"
+                android:textSize="15sp"
+                tools:text="@string/tv_sold" />
+
+            <!-- Unidades disponibles -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_sold"
+                android:fontFamily="@font/mulish"
+                android:textSize="15sp"
+                tools:text="@string/tv_stock" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_stock"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <!--Rating bar-->
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/rating_bar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@android:color/darker_gray"
+                    android:progressTint="@android:color/holo_orange_light"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:stepSize="1"
+                    tools:rating="3" />
+
+                <!--Promedio-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_avg_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_shop"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toEndOf="@id/rating_bar"
+                    android:fontFamily="@font/mulish"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="@string/tv_average_rating" />
+
+                <!--Total de calificaciones-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_total_ratings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="@string/tv_total_ratings" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="7dp"
+                android:src="@drawable/ic_no_favourite" />
+
+            <!--Para deslizar las imágenes del producto-->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/ll_rating"
+                android:background="@drawable/custom_linear_layout"
+                android:padding="9dp" />
+
+            <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+                android:id="@+id/rl_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vp_image"
+                android:layout_marginTop="10dp">
+
+                <!--Precio del producto-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish"
+                    android:padding="5dp"
+                    android:textSize="23sp"
+                    tools:text="@string/product_price_et" />
+
+                <!-- Precio tachado -->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_product_price_paint_flags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_toEndOf="@id/product_price"
+                    android:fontFamily="@font/mulish"
+                    android:padding="12dp"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    tools:text="@string/price_format" />
+
+                <!--Gastos de envío-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shipping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_price"
+                    android:fontFamily="@font/mulish"
+                    android:padding="5dp"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    tools:text="@string/shipping_tv" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/free_shipping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_price"
+                    android:padding="5dp"
+                    android:text="@string/tv_free_shipping"
+                    android:textColor="@color/green"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/general_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_price"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/tv_general_info"
+                android:textColor="@color/bazaar"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!--Descripción del producto-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/product_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/general_info"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/mulish"
+                android:textSize="15sp"
+                tools:text="@tools:sample/lorem[23]" />
+
+
+            <!-- Botón "Añadir al carrito"-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_to_cart"
+                style="@style/PrimaryButton"
+                android:layout_below="@id/product_description"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="23dp"
+                android:layout_marginBottom="47dp"
+                android:text="@string/btn_add_to_cart" />
+
+        </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.user.account.AccountActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_app" />
+
+    <!--Datos de acceso-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/custom_linear_layout"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/mulish"
+            android:text="@string/login_info"
+            android:textColor="@color/bazaar"
+            android:textSize="12sp" />
+
+        <!-- Correo electrónico -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish"
+            tools:text="@string/email_tv" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--Datos personales-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_personal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="15dp"
+        android:background="@drawable/custom_linear_layout"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/mulish"
+            android:text="@string/personal_info"
+            android:textColor="@color/bazaar"
+            android:textSize="12sp" />
+
+        <!-- Nombre -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish"
+            tools:text="@string/name_tv" />
+
+        <!-- Apellidos -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_surnames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish"
+            tools:text="@string/surnames_tv" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--Datos de envío/facturación-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/custom_linear_layout"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/mulish"
+            android:text="@string/billing_info"
+            android:textColor="@color/bazaar"
+            android:textSize="12sp" />
+
+        <!-- Dirección -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish"
+            tools:text="@string/address_tv" />
+
+        <!-- Población -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish"
+            tools:text="@string/city_tv" />
+
+        <!-- Provincia -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_province"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish"
+            tools:text="@string/province_tv" />
+
+        <!-- Código Postal -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_zip_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish"
+            tools:text="@string/zip_code_tv" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Floating Action Button-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="23dp"
+        android:backgroundTint="@color/bazaar"
+        android:contentDescription="@string/update_user_btn"
+        android:src="@drawable/ic_edit"
+        app:tint="@color/white" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

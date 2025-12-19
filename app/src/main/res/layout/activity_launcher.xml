@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_linear_layout"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.launcher.LauncherActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="BazaarSplash.json"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_loop="true" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/error_img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:srcCompat="@drawable/img_error" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/curlzmt"
+        android:text="@string/app_name"
+        android:textColor="@color/bazaar"
+        android:textSize="55sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+        android:id="@+id/error_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="23dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/error_title"
+            style="@style/TitleHeader"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/errorColor"
+            android:textSize="17sp"
+            tools:text="@string/something_went_wrong" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/error_message"
+            style="@style/ErrorTextView"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/error_title"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            tools:text="@string/error_title" />
+
+    </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

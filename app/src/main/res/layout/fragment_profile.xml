@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?><!--<FrameLayout-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="85dp"
+    android:fillViewport="true"
+    tools:context=".ui.user.profile.ProfileFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/mulish"
+            android:textStyle="italic"
+            android:textSize="17sp"
+            tools:text="@string/welcome" />
+        
+        <com.google.android.material.circularreveal.CircularRevealGridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="2"
+            android:padding="15dp"
+            android:rowCount="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_account"
+                style="@style/TransparentButton"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:text="@string/btn_account" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_orders"
+                style="@style/TransparentButton"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:text="@string/btn_orders" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_favourites"
+                style="@style/TransparentButton"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:text="@string/btn_favourites" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reviews"
+                style="@style/TransparentButton"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:text="@string/btn_reviews" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_shop"
+                style="@style/TransparentButton"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:text="@string/shop" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_admin"
+                style="@style/TransparentButton"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:text="@string/admin" />
+
+        </com.google.android.material.circularreveal.CircularRevealGridLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="23dp"
+            android:orientation="horizontal">
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

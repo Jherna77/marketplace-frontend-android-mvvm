@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="11dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/product"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_linear_layout"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp">
+
+            <!-- Imagen del producto -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/product_image"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_image" />
+
+            <!-- Promo -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/promo"
+                android:layout_width="55dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/img_promo"
+                android:visibility="gone" />
+
+        </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+
+        <!--Rating bar-->
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating_bar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:numStars="5"
+            android:progressBackgroundTint="@android:color/darker_gray"
+            android:progressTint="@android:color/holo_orange_light"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:stepSize="1"
+            tools:rating="3" />
+
+        <!-- Nombre del producto -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/mulish"
+            android:maxLines="1"
+            android:textSize="14sp"
+            tools:text="@string/product_name_et" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="horizontal">
+
+            <!-- Precio del producto -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/mulish"
+                android:textColor="@color/bazaar"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                tools:text="@string/price_format" />
+
+            <!-- Precio tachado -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_product_price_paint_flags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:fontFamily="@font/mulish"
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                tools:text="@string/price_format" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Unidades vendidas -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_sold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/mulish"
+            android:textSize="14sp"
+            tools:text="@string/tv_sold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

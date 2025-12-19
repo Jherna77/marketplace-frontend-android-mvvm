@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context=".ui.product.manage.ManageProductActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_app" />
+
+        <!-- Información del producto -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/custom_linear_layout"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/product_info"
+                android:textColor="@color/bazaar"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/product_categories_et"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <!-- Categoría del producto -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_product_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="23dp"
+                android:background="@drawable/custom_edit_text"
+                android:drawableStart="@drawable/ic_categories"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/mulish"
+                android:gravity="center_vertical"
+                android:hint="@string/product_select_categories_et"
+                android:padding="11dp"
+                android:textSize="17sp"
+                app:drawableEndCompat="@drawable/ic_down" />
+
+            <!-- Nombre del producto -->
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormTextInputLayout">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_product_name"
+                    style="@style/FormEditText"
+                    android:hint="@string/product_name_et"
+                    android:inputType="textCapSentences" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Descripción del producto -->
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormTextInputLayout">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_product_description"
+                    style="@style/FormEditText"
+                    android:layout_height="150dp"
+                    android:gravity="top|start"
+                    android:hint="@string/product_description_et"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:scrollbars="vertical" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Precio del producto -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/FormTextInputLayout"
+                app:suffixText="@string/euro">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_product_price"
+                    style="@style/FormEditText"
+                    android:hint="@string/product_price_et"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Gastos de envío -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/FormTextInputLayout"
+                app:suffixText="@string/euro">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_shipping"
+                    style="@style/FormEditText"
+                    android:hint="@string/product_shipping_et"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Gastos de envío -->
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormTextInputLayout">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_stock"
+                    style="@style/FormEditText"
+                    android:hint="@string/product_stock_et"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Descuento del producto -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/custom_linear_layout"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <!-- Switch -->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/product_discount_sw"
+                android:textSize="17sp" />
+
+            <!-- Precio del producto con descuento aplicado-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/FormTextInputLayout"
+                app:suffixText="@string/euro">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_discount_price"
+                    style="@style/FormEditText"
+                    android:enabled="false"
+                    android:hint="@string/discount_price_et"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Imágenes del producto -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/custom_linear_layout"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/product_images"
+                android:textColor="@color/bazaar"
+                android:textSize="12sp" />
+
+            <!-- Añadir imagen -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_add_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/add_image"
+                android:textSize="17sp"
+                app:drawableLeftCompat="@drawable/ic_add"
+                app:drawableTint="@color/bazaar" />
+
+            <!-- Listar imágenes de un producto -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_product_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4"
+                tools:listitem="@layout/item_image" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_errors"
+            style="@style/ErrorTextView"
+            tools:text="@string/error_title" />
+
+        <!-- Botón "Añadir / actualizar producto" -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save_product"
+            style="@style/PrimaryButton"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="7dp"
+            tools:text="@string/add_product" />
+
+        <!-- Botón "Deshabilitar producto" -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_disable_product"
+            style="@style/PrimaryButton"
+            android:backgroundTint="@color/errorColor"
+            android:text="@string/disable_product"
+            android:visibility="gone" />
+
+        <!-- Botón "Habilitar producto" -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_enable_product"
+            style="@style/PrimaryButton"
+            android:layout_marginBottom="7dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/enable_product"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

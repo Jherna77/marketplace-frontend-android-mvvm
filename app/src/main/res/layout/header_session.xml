@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_session"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bazaar_background"
+    android:padding="7dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/curlzmt"
+        android:padding="5dp"
+        android:text="@string/app_name"
+        android:textColor="@color/bazaar"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_welcome"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/mulish"
+        android:text="@string/login_btn"
+        android:textColor="@color/bazaar"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:drawableEndCompat="@drawable/ic_login"
+        app:drawableTint="@color/bazaar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_welcome"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/mulish"
+        android:text="@string/logout_btn"
+        android:textColor="@color/bazaar"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:drawableEndCompat="@drawable/ic_logout"
+        app:drawableTint="@color/bazaar" />
+
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>

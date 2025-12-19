@@ -1,0 +1,349 @@
+<resources>
+    <string name="app_name">BaZaaR</string>
+    <string name="restart_app">Reiniciar BaZaaR</string>
+    <string name="welcome">"Hola, %s"</string>
+    <string name="welcome_default">Bienvenido, identifícate</string>
+    <string name="back_btn">Volver</string>
+
+    <string name="float_format">"%.2f"</string>
+    <string name="string_format">"%s"</string>
+
+    <!-- Roles de usuario-->
+    <string name="role_admin">Administrador</string>
+    <string name="role_shop">Tienda</string>
+    <string name="role_customer">Cliente</string>
+    <string name="unknown_role">Tipo de usuario desconocido</string>
+
+    <!-- Progress dialog -->
+    <string name="pd_msg">Espera, por favor</string>
+    <string name="access_title">Accediendo al sistema…</string>
+    <string name="create_account_title">Creando cuenta…</string>
+    <string name="loading_title">Cargando…</string>
+    <string name="create_category_title">Creando categoría…</string>
+    <string name="create_product_title">Creando producto…</string>
+    <string name="update_category_title">Actualizando categoría…</string>
+
+    <!-- Confirmation dialog -->
+    <string name="confirm_resp">Confirmar</string>
+    <string name="cancel_resp">Cancelar</string>
+    <string name="ok_resp">OK</string>
+    <string name="exit_warn">Cerrar BaZaaR</string>
+    <string name="exit_msg">¿Estás seguro de que deseas salir de BaZaaR?</string>
+    <string name="logout_warn">Cerrar sesión</string>
+    <string name="logout_msg">¿Estás seguro de que deseas cerrar la sesión?</string>
+    <string name="enable_user_warn">Habilitar usuario</string>
+    <string name="enable_user_msg">¿Estás seguro de que deseas habilitar este usuario?</string>
+    <string name="disable_user_warn">Deshabilitar usuario</string>
+    <string name="disable_user_msg">¿Estás seguro de que deseas desabilitar este usuario?</string>
+    <string name="delete_user_warn">Eliminar usuario</string>
+    <string name="delete_user_msg">¿Estás seguro de que deseas eliminar definitivamente este usuario?\n\nATENCIÓN: ESTA ACCIÓN NO SE PUEDE DESHACER</string>
+    <string name="enable_category_warn">Habilitar categoría</string>
+    <string name="enable_category_msg">¿Estás seguro de que deseas habilitar la categoría?</string>
+    <string name="disable_category_warn">Deshabilitar categoría</string>
+    <string name="disable_category_msg">¿Estás seguro de que deseas desabilitar la categoría?</string>
+    <string name="delete_category_warn">Eliminar categoría</string>
+    <string name="delete_category_msg">¿Estás seguro de que deseas eliminar definitivamente esta categoría?\nLos productos pertenecientes a esta categoría se moverán a la categoría "Otros"\n\nATENCIÓN: ESTA ACCIÓN NO SE PUEDE DESHACER</string>
+    <string name="enable_product_warn">Habilitar producto</string>
+    <string name="enable_product_msg">¿Estás seguro de que deseas habilitar el producto?</string>
+    <string name="disable_product_warn">Deshabilitar producto</string>
+    <string name="disable_product_msg">¿Estás seguro de que deseas desabilitar el producto?</string>
+    <string name="delete_product_warn">Eliminar producto</string>
+    <string name="delete_product_msg">¿Estás seguro de que deseas eliminar definitivamente este producto?\n\nATENCIÓN: ESTA ACCIÓN NO SE PUEDE DESHACER</string>
+    <string name="remove_cart_product_msg">¿Estás seguro de que deseas eliminar el producto del carro?</string>
+    <string name="remove_cart_product_warn">Eliminar producto del carro</string>
+    <string name="clear_cart_msg">¿Estás seguro de que deseas vaciar el carro?</string>
+    <string name="clear_cart_warn">Vaciar carro de compra</string>
+    <string name="remove_img_warn">Eliminar imagen</string>
+    <string name="remove_img_msg">¿Estás seguro de que deseas eliminar la imagen?</string>
+    <string name="update_status_warn">Actualizar estado</string>
+    <string name="update_status_msg">"¿Estás seguro de que deseas actualizar el estado del pedido a %s?"</string>
+    <string name="cancel_order_warn">Cancelar pedido</string>
+    <string name="cancel_order_msg">¿Estás seguro de que deseas cancelar el pedido?</string>
+    <string name="delete_message_warn">Eliminar mensaje</string>
+    <string name="delete_message_msg">¿Estás seguro de que deseas eliminar el mensaje?</string>
+
+    <!-- Toast -->
+    <string name="toast_login_success">Sesión iniciada correctamente</string>
+    <string name="toast_logout_success">Sesión cerrada correctamente</string>
+    <string name="toast_register_success">Usuario registrado correctamente</string>
+    <string name="toast_success_action">Acción realizada correctamente</string>
+    <string name="toast_delete_category_success">Categoría eliminada</string>
+    <string name="toast_delete_product_success">Producto eliminado</string>
+    <string name="toast_canceled_action">Acción cancelada</string>
+    <string name="toast_max_images">Número máximo de imágenes alcanzado</string>
+    <string name="toast_image_removed">Imagen eliminada</string>
+
+    <!-- Errores -->
+    <string name="error_title">Error </string>
+    <string name="something_went_wrong">Algo ha ido mal…</string>
+    <string name="required_field_error">Todos los campos son obligatorios</string>
+    <string name="password_match_error">Las constraseñas no coinciden</string>
+    <string name="unchecked_terms_error">Es obligatorio aceptar las condiciones de uso de la plataforma</string>
+    <string name="select_category_msg">Debe seleccionar al menos una categoría</string>
+    <string name="invalid_price_msg">El precio debe ser un valor positivo</string>
+    <string name="invalid_shipping_msg">El envío no puede ser un valor negativo</string>
+    <string name="invalid_discount_price_msg">El precio con descuento no puede ser un valor negativo</string>
+    <string name="select_rating_msg">Debe asignar una calificación al producto</string>
+    <string name="select_image_msg">Debe seleccionar una imagen</string>
+    <string name="required_query_error">Introduzca algún término de búsqueda</string>
+    <string name="image_upload_error">Error al almacenar las imágenes</string>
+    <string name="bad_request_error">Solicitud incorrecta</string>
+    <string name="unauthorized_error">No autorizado</string>
+    <string name="forbidden_error">No tiene permiso para acceder al recurso</string>
+    <string name="not_found_error">No encontrado</string>
+    <string name="server_error">Error en el servidor</string>
+    <string name="network_error">Error de red</string>
+    <string name="network_error_msg">No ha sido posible conectar con BaZaaR :(</string>
+    <string name="unknown_error">Error desconocido. Inténtalo de nuevo más tarde</string>
+    <string name="payment_error">Error al procesar el pago</string>
+
+    <!-- Login -->
+    <string name="login_title">Acceso de usuarios</string>
+    <string name="email_et">Correo electrónico</string>
+    <string name="password_et">Contraseña</string>
+    <string name="login_btn">Acceder</string>
+    <string name="logout_btn">Salir</string>
+    <string name="register_tv"><u>¿No estás registrado? Crea tu cuenta</u></string>
+    <string name="forgot_password">¿Has olvidado tu contraseña?</string>"
+
+    <!-- Gestión de usuarios -->
+    <string name="users">Usuarios</string>
+    <string name="title_register">Registro de usuarios</string>
+    <string name="title_update">Editar usuario</string>
+    <string name="login_info">Datos de acceso</string>
+    <string name="user_role_et">Tipo de usuario</string>
+    <string name="select_user_role">Seleccione un tipo de usuario</string>
+    <string name="select_fav_categories">Seleccione sus categorías favoritas</string>
+    <string name="confirm_pw_et">Confirmar contraseña</string>
+    <string name="password_format_tv">La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula, un número y un caracter especial</string>
+    <string name="personal_info">Datos personales</string>
+    <string name="name_et">Nombre</string>
+    <string name="surnames_et">Apellidos</string>
+    <string name="billing_info">Datos de envío/facturación</string>
+    <string name="address_et">Dirección</string>
+    <string name="city_et">Población</string>
+    <string name="province_et">Provincia</string>
+    <string name="zip_code_et">Código Postal</string>
+    <string name="select_favourite_categories_et">Seleccione categorías favoritas</string>
+    <string name="terms_conditions">Condiciones de uso y política de privacidad</string>
+    <string name="terms_conditions_cb">Acepto las condiciones de uso y la política de privacidad.</string>
+    <string name="register_btn">Resgistrar usuario</string>
+    <string name="update_user_btn">Actualizar usuario</string>
+    <string name="disable_user_btn">Deshabilitar usuario</string>
+    <string name="enable_user_btn">Habilitar usuario</string>
+    <string name="delete_user_btn">Eliminar usuario</string>
+    <string name="login_tv"><u>Ya tengo una cuenta</u></string>
+    <string name="add_user">Añadir usuario</string>
+
+    <!-- Profile Fragment -->
+    <string name="btn_account">Mi cuenta</string>
+    <string name="btn_orders">Mis pedidos</string>
+    <string name="btn_favourites">Mis favoritos</string>
+    <string name="btn_reviews">Mis reseñas</string>
+    <string name="shop">Mi tienda</string>
+    <string name="admin">Administración</string>
+
+    <!-- Información de la cuenta -->
+    <string name="account_info_title">Datos de la cuenta</string>
+    <string name="email_tv">"Correo electrónico: %s"</string>
+    <string name="name_tv">"Nombre: %s"</string>
+    <string name="surnames_tv">"Apellidos: %s"</string>
+    <string name="address_tv">"Dirección: %s"</string>
+    <string name="city_tv">"Población: %s"</string>
+    <string name="province_tv">"Provincia: %s"</string>
+    <string name="zip_code_tv">"Código Postal: %s"</string>
+
+    <!-- Cart Fragment -->
+    <string name="cart">Carro de compra</string>
+    <string name="cart_info_no_products">El carrito está vacío</string>
+    <string name="quantity_of_products">"Cantidad: %d"</string>
+    <string name="btn_process_order">Tramitar pedido</string>
+    <string name="btn_clear_cart">Vaciar carro</string>
+    <string name="tv_keep_buying"><u>Continuar comprando</u></string>
+    <string name="tv_subtotal_amount">"Subtotal: %.2f €"</string>
+    <string name="tv_send_to">Enviar a:</string>
+    <string name="select_quantity">Seleccione cantidad</string>
+    <string name="tv_shipping">"Gastos de envío: %.2f €"</string>
+    <string name="tv_free_shipping">Envío gratis!!</string>
+    <string name="tv_price_info">El precio y la disponibilidad de los productos de BaZaaR están sujetos a cambio. En el carro de compra puedes dejar temporalmente los productos que quieres. En él aparecerá el precio más reciente de cada producto.</string>
+
+    <!-- Payment Activity -->
+    <string name="order_info_title">Información del pedido</string>
+    <string name="products_tv">"Productos: %.2f €"</string>
+    <string name="shipping_tv">"Envío: %.2f €"</string>
+    <string name="total_tv">"Total: %.2f"</string>
+    <string name="payment_tv">Método de pago</string>
+    <string name="credit_card_tv">Tarjeta de crédito</string>
+    <string name="paypal_tv">PayPal</string>
+    <string name="card_number_et">Número de tarjeta</string>
+    <string name="expiry_date_et">MM/AA</string>
+    <string name="cvv_et">CVV</string>
+    <string name="btn_make_payment">Realizar pago</string>
+
+    <!-- Gestión de pedidos -->
+    <string name="orders">Pedidos realizados</string>
+    <string name="info_no_orders">No existen resultados</string>
+    <string name="order_detail">Detalle del pedido</string>
+    <string name="sale_detail">Detalle de la venta</string>
+    <string name="order_number_tv">"Número de pedido: %d"</string>
+    <string name="sale_number_tv">"Número de venta: %d"</string>
+    <string name="order_date_tv">"Fecha del pedido: %s"</string>
+    <string name="sale_date_tv">"Fecha de venta: %s"</string>
+    <string name="customer_tv">"Cliente: %s"</string>
+    <string name="shop_tv">"Tienda: %s"</string>
+    <string name="sale_address_tv">"Dirección: %s"</string>
+    <string name="amount_tv">"Importe: %.2f €</string>
+    <string name="order_payment_tv">"Forma de pago: %s"</string>
+    <string name="order_status_tv">"Estado del pedido: %s"</string>
+    <string name="order_change_status">"Marcar pedido como:"</string>
+    <string name="tv_leave_review"><u>Dejar una reseña</u></string>
+    <string name="sales">Ventas realizadas</string>
+    <string name="info_no_sales">No se ha realizado ninguna venta</string>
+    <string name="btn_update_status">Actualizar estado</string>
+    <string name="confirm_order">Confirmar pedido</string>
+    <string name="cancel_order">Cancelar pedido</string>
+
+    <!-- Estados de un pedido-->
+    <string name="status_pending">Pendiente</string>
+    <string name="status_confirmed">Confirmado</string>
+    <string name="status_shipped">Enviado</string>
+    <string name="status_delivered">Entregado</string>
+    <string name="status_cancelled">Cancelado</string>
+    <string name="status_returned">Devuelto</string>
+    <string name="unknown_status">Estado desconocido</string>
+
+    <!-- Reseñas-->
+    <string name="add_review">Añadir reseña</string>
+    <string name="product_review">Reseña de producto</string>
+    <string name="product_review_et">Reseña del producto</string>
+    <string name="product_reviews">Reseñas del producto</string>
+    <string name="reviews">Mis reseñas</string>
+
+    <!-- Mensajes -->
+    <string name="messages">Mensajes</string>
+    <string name="message_detail">Detalle del mensaje</string>
+    <string name="message_date_tv">"Fecha del mensaje: %s"</string>
+    <string name="orders_btn">Ir a Mis Pedidos</string>
+    <string name="info_no_messages">No hay mensajes</string>
+
+    <!-- Gestión de categorías -->
+    <string name="categories">Categorías</string>
+    <string name="category_name">"Categoría %s"</string>
+    <string name="category_name_et">Nombre de la categoría</string>
+    <string name="add_category">Añadir categoría</string>
+    <string name="edit_category">Editar categoría</string>
+    <string name="disable_category">Deshabilitar categoría</string>
+    <string name="enable_category">Habilitar categoría</string>
+    <string name="update_category">Actualizar categoría</string>
+    <string name="delete_category">Eliminar categoría</string>
+    <string name="watch_products">Ver productos</string>
+
+    <!-- Gestión de productos -->
+    <string name="products">Productos</string>
+    <string name="shop_products">"Productos de %s"</string>
+    <string name="favourite_products">Productos favoritos</string>
+    <string name="product_info">Información del producto</string>
+    <string name="select_categories">Seleccione categorías para el producto</string>
+    <string name="product_name_et">Nombre del producto</string>
+    <string name="product_description_et">Descripción del producto</string>
+    <string name="product_categories_et">Categorías del producto</string>
+    <string name="product_select_categories_et">Seleccione categorías</string>
+    <string name="product_price_et">Precio del producto</string>
+    <string name="product_shipping_et">Gastos de envío</string>
+    <string name="product_stock_et">Unidades en stock</string>
+    <string name="product_discount_sw">Aplicar descuento</string>
+    <string name="discount_price_et">Precio con descuento</string>
+    <string name="euro">€</string>
+    <string name="price_format">"%.2f €"</string>
+    <string name="product_images">Imágenes del producto</string>
+    <string name="add_image">Añadir una imagen</string>
+    <string name="add_product">Añadir producto</string>
+    <string name="edit_product">Editar producto</string>
+    <string name="delete_product">Eliminar producto</string>
+    <string name="update_product">Actualizar producto</string>
+    <string name="disable_product">Deshabilitar producto</string>
+    <string name="enable_product">Habilitar producto</string>
+    <string name="shop_info_no_products">No hay productos en tu tienda</string>
+    <string name="search_info_no_products">No hay productos para la búsqueda seleccionada</string>
+    <string name="recent_info_no_products">No hay productos añadidos recientemente</string>
+    <string name="favourite_info_no_products">No hay productos añadidos a favoritos</string>
+    <string name="category_info_no_products">No hay productos en esta categoría</string>
+    <string name="search_results">"Resultados de %s"</string>
+    <string name="et_search_product">Buscar producto</string>
+    <string name="btn_add_to_cart">Añadir al carrito</string>
+    <string name="product_added_to_cart">Producto añadido al carrito</string>
+    <string name="discounted">Productos rebajados</string>
+    <string name="recently_added">Añadidos recientemente</string>
+    <string name="top_selling">Los más vendidos</string>
+    <string name="top_rating">Los mejor valorados</string>
+
+    <!-- Detalle del producto -->
+    <string name="product_detail">Detalle del producto</string>
+    <string name="tv_product_shop">"Vendido por %s"</string>
+    <string name="tv_average_rating">"%.2f / 5"</string>
+    <string name="tv_total_ratings">"(%d)"</string>
+    <string name="tv_general_info">Información general</string>
+    <string name="tv_image_count">"%d/%d"</string>
+    <string name="tv_sold">"Vendidos: %d"</string>
+    <string name="tv_stock">"Unidades disponibles: %d"</string>
+
+    <!-- Copias de seguridad -->
+    <string name="backup">Copias de seguridad</string>
+    <string name="create_backup">Crear copia de seguridad</string>
+    <string name="backup_detail">Detalle de la copia</string>
+    <string name="backup_number_tv">"Número de copia de seguridad: %d"</string>
+    <string name="backup_date_tv">"Fecha de la copia de seguridad: %s"</string>
+    <string name="restore_backup_btn">Restaurar copia</string>
+
+    <!-- Filtros -->
+    <string name="filter">Filtrar resultados</string>
+    <string name="filter_all">Todos</string>
+    <string name="tag_all">ALL</string>
+    <string name="filter_customer">Cliente</string>
+    <string name="tag_customer">ROLE_CUSTOMER</string>
+    <string name="filter_shop">Tienda</string>
+    <string name="tag_shop">ROLE_SHOP</string>
+    <string name="filter_admin">Admin</string>
+    <string name="tag_admin">ROLE_ADMIN</string>
+    <string name="filter_state">Estado</string>
+    <string name="filter_enabled">Habilitados</string>
+    <string name="tag_enabled">ENABLED</string>
+    <string name="filter_disabled">Deshabilitados</string>
+    <string name="tag_disabled">DISABLED</string>
+    <string name="filter_order">Orden</string>
+    <string name="filter_ascending">Ascendente</string>
+    <string name="tag_ascending">ASC</string>
+    <string name="filter_descending">Descendente</string>
+    <string name="tag_descending">DESC</string>
+    <string name="filter_promo">Rebajados</string>
+    <string name="tag_promo">PROMO</string>
+    <string name="filter_price_ascending">Precio ascendente</string>
+    <string name="tag_price_ascending">PRICE_ASC</string>
+    <string name="filter_price_descending">Precio descendente</string>
+    <string name="tag_price_descending">PRICE_DESC</string>
+    <string name="filter_rating_ascending">Valoración ascendente</string>
+    <string name="tag_rating_ascending">RATING_ASC</string>
+    <string name="filter_rating_descending">Valoración descendente</string>
+    <string name="tag_rating_descending">RATING_DESC</string>
+    <string name="filter_pending">Pendientes</string>
+    <string name="tag_pending">PENDING</string>
+    <string name="filter_confirmed">Confirmados</string>
+    <string name="tag_confirmed">CONFIRMED</string>
+    <string name="filter_shipped">Enviados</string>
+    <string name="tag_shipped">SHIPPED</string>
+    <string name="filter_delivered">Entregados</string>
+    <string name="tag_delivered">DELIVERED</string>
+    <string name="filter_cancelled">Cancelados</string>
+    <string name="tag_cancelled">CANCELLED</string>
+    <string name="filter_returned">Devueltos</string>
+    <string name="tag_returned">RETURNED</string>
+    <string name="filter_info_no_results">No hay resultados para los filtros seleccionados</string>
+
+    <!-- stubs -->
+    <string name="toast_not_implemented">TODO: No implementado</string>
+    <string name="header_title">Título</string>
+    <string name="could_not_restart_app">No fue posible reinicar la aplicación</string>
+    <string name="total_products">Suma productos</string>
+
+
+</resources>

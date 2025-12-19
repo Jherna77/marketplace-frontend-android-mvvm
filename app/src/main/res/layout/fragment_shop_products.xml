@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="85dp"
+    android:fillViewport="true"
+    tools:context=".ui.product.shop.ShopProductsFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_shop_name"
+            style="@style/TitleFragment"
+            android:layout_width="wrap_content"
+            android:text="@string/shop_products" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_Products"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/item_shop_product" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_info"
+            style="@style/InfoTextView"
+            android:text="@string/shop_info_no_products"
+            android:visibility="gone" />
+
+        <!-- Floating Action Button-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_fab"
+            style="@style/AddFAB"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="60dp"
+            android:contentDescription="@string/add_product" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.payment.PaymentActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_app" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_send_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:fontFamily="@font/mulish"
+            android:gravity="center_vertical"
+            android:text="@string/tv_send_to"
+            android:textColor="@color/bazaar"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/img_gps" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_send_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/custom_linear_layout"
+            android:orientation="vertical"
+            android:padding="7dp">
+
+            <!-- Nombre -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:textSize="14sp"
+                tools:text="@string/name_et" />
+
+            <!-- Dirección -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:textSize="14sp"
+                tools:text="@string/address_et" />
+
+            <!-- Población -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:textSize="14sp"
+                tools:text="@string/city_et" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Total -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_total_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:fontFamily="@font/mulish"
+            android:gravity="center_vertical"
+            android:textColor="@color/bazaar"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_euro"
+            tools:text="@string/total_tv" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/custom_linear_layout"
+            android:orientation="vertical"
+            android:padding="7dp">
+
+            <!-- Productos -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_products"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:textSize="14sp"
+                tools:text="@string/products_tv" />
+
+            <!-- Envío -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_shipping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:textSize="14sp"
+                tools:text="@string/shipping_tv" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Botón "Realizar pago" -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_make_payment"
+            style="@style/PrimaryButton"
+            android:layout_marginTop="33dp"
+            android:text="@string/btn_make_payment" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

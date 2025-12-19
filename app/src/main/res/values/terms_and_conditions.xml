@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Condiciones de uso -->
+    <string name="terms_title">Términos y condiciones</string>
+    <string name="terms_description">Lea detenidamente este acuerdo de Términos y Condiciones de servicio antes de acceder o utilizar BaZaaR.</string>
+    <string name="terms_admin_account">Las Cuentas Personales tienen los siguientes controles administrativos:</string>
+    <string name="terms_admin_account_bot">- La cuenta debe crearla un ser humano: No se permiten cuentas registradas por bots u otros métodos automatizados.</string>
+    <string name="terms_admin_account_protection">- Usted es responsable de proteger su cuenta: BaZaaR no será responsable de ninguna pérdida o daño por su incumplimiento de esta obligación de seguridad.</string>
+    <string name="terms_admin_account_session">- Su inicio de sesión solo puede ser utilizado por una persona: Un solo inicio de sesión no puede ser compartido por varias personas.</string>
+    <string name="terms_admin_account_email">- Se debe proporcionar una dirección de correo electrónico válida: El correo electrónico será nuestra forma de comunicación predeterminada.</string>
+    <string name="terms_admin_account_resolution">En caso de que BaZaaR detecte algún comportamiento inapropiado, la empresa se reserva el derecho de rescindir el contrato entre las partes.</string>
+
+    <!-- Política de privacidad -->
+    <string name="privacy_title">Política de privacidad</string>
+    <string name="privacy_description">Aquí describimos cómo gestionamos sus «Datos Personales», es decir, información que está vinculada con usted de manera directa o indirecta. Se aplica a los Datos personales que BaZaaR, Inc procesa como «Controlador de datos» cuando interactúa con los sitios web, aplicaciones y servicios que indica esta Declaración (colectivamente, «Servicios»). Los Datos personales se recopilan directamente de usted, automáticamente desde su dispositivo y también de terceros. Los Datos personales de BaZaaR se procesan cuando se usan los servicios, según variables, como la forma en que interactúa con nuestros Servicios (por ejemplo, a través de interfaces web, escritorio o aplicaciones móviles), las características que use (como solicitudes de incorporación de cambios) y el método de acceso a los Servicios. A continuación, detallamos la información que recopilamos a través de cada uno de estos canales:</string>
+    <string name="privacy_data">- Datos de cuenta: Recopilamos cierta información cuando abre una cuenta, como su dirección de correo electrónico, el nombre, los apellidos, el telefono, la dirección, la contraseña, la información de pago y la información de transacción.</string>
+    <string name="privacy_ratings">- Datos de valoraciones: Consta de información que envía a través de encuestas, revisiones o características interactivas.</string>
+    <string name="privacy_payment">- Información de pago: Recopilamos información como el nombre, la dirección de facturación y los detalles de pago.</string>
+    <string name="privacy_profile">- Información del perfil: Recopilamos información para crear un perfil de usuario, lo cual puede incluir preferencias referentes a la visualización de contenidos multimedia.</string>
+
+    <!-- Sobre BaZaaR -->
+    <string name="about_title">Sobre BaZaaR</string>
+    <string name="about_description">Aplicación creada por Jorge Hernández para el Proyecto Fin de Grado de Ingeniería en Tecnologías de la Información.</string>
+    <string name="app_created_by">Aplicación creada por…</string>
+    <string name="app_creator">Jorge Hernández</string>
+</resources>

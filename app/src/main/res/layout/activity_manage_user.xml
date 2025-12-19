@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context=".ui.user.manage.ManageUserActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_app" />
+
+        <!-- Datos de acceso -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/custom_linear_layout"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/login_info"
+                android:textColor="@color/bazaar"
+                android:textSize="12sp" />
+
+            <!-- Tipo de usuario -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_user_role"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="23dp"
+                android:background="@drawable/custom_edit_text"
+                android:fontFamily="@font/mulish"
+                android:gravity="center_vertical"
+                android:hint="@string/user_role_et"
+                android:padding="11dp"
+                android:textSize="17sp"
+                app:drawableEndCompat="@drawable/ic_down" />
+
+            <!-- Pedir correo electrónico -->
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    style="@style/FormEditText"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/email_et"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Pedir contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password"
+                style="@style/FormTextInputLayout"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    style="@style/FormEditText"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/password_et"
+                    android:inputType="textPassword"
+                    app:passwordToggleEnabled="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Confirmar contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_confirm_pw"
+                style="@style/FormTextInputLayout"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/confirm_pw"
+                    style="@style/FormEditText"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/confirm_pw_et"
+                    android:inputType="textPassword"
+                    app:passwordToggleEnabled="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pw_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:drawablePadding="5dp"
+                android:text="@string/password_format_tv"
+                android:textStyle="italic"
+                app:drawableLeftCompat="@drawable/ic_info" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Datos personales-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/custom_linear_layout"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/personal_info"
+                android:textColor="@color/bazaar"
+                android:textSize="12sp" />
+
+            <!-- Pedir nombre -->
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
+                    style="@style/FormEditText"
+                    android:hint="@string/name_et"
+                    android:inputType="textPersonName|textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Pedir apellidos -->
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/surnames"
+                    style="@style/FormEditText"
+                    android:hint="@string/surnames_et"
+                    android:inputType="textPersonName|textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Datos de envío/facturación-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/custom_linear_layout"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/billing_info"
+                android:textColor="@color/bazaar"
+                android:textSize="12sp" />
+
+            <!-- Pedir dirección -->
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/address"
+                    style="@style/FormEditText"
+                    android:hint="@string/address_et"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Pedir población -->
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/city"
+                    style="@style/FormEditText"
+                    android:hint="@string/city_et"
+                    android:inputType="textPersonName|textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Pedir provincia -->
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/province"
+                    style="@style/FormEditText"
+                    android:hint="@string/province_et"
+                    android:inputType="textPersonName|textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Pedir código postal -->
+            <com.google.android.material.textfield.TextInputLayout style="@style/FormTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/zip_code"
+                    style="@style/FormEditText"
+                    android:hint="@string/zip_code_et"
+                    android:inputType="number"
+                    android:maxLength="5" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Categorías favoritas -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_favourite_categories"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/custom_linear_layout"
+            android:drawableStart="@drawable/ic_categories"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/mulish"
+            android:gravity="center_vertical"
+            android:hint="@string/select_favourite_categories_et"
+            android:padding="11dp"
+            android:textSize="17sp"
+            app:drawableEndCompat="@drawable/ic_down" />
+
+        <!--Condiciones de uso y política de privacidad-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/custom_linear_layout"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/terms_conditions"
+                android:textColor="@color/bazaar"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/terms_conditions_cb"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/terms_title"
+                android:textColor="@color/bazaar"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:id="@+id/tv_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/privacy_title"
+                android:textColor="@color/bazaar"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/about_title"
+                android:textColor="@color/bazaar"
+                android:textSize="15sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_errors"
+            style="@style/ErrorTextView"
+            tools:text="@string/error_title" />
+
+        <!-- Botón "Registrar / Actualizar usuario" -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save_user"
+            style="@style/PrimaryButton"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="7dp"
+            tools:text="@string/register_btn" />
+
+        <!-- Botón "Deshabilitar usuario" -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_disable_user"
+            style="@style/PrimaryButton"
+            android:backgroundTint="@color/errorColor"
+            android:text="@string/disable_user_btn"
+            android:visibility="gone" />
+
+        <!-- Botón "Habilitar usuario" -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_enable_user"
+            style="@style/PrimaryButton"
+            android:layout_marginBottom="7dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/enable_user_btn"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/log_in"
+            style="@style/SecondaryButton"
+            android:text="@string/login_tv"
+            android:textSize="17sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

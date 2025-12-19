@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="85dp"
+    android:fillViewport="true"
+    tools:context=".ui.messages.user.UserMessagesFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="77dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TitleFragment"
+            android:layout_width="wrap_content"
+            android:text="@string/messages" />
+
+        <!--  Filtrar -->
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/btn_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/filter"
+            android:src="@drawable/ic_filter" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <!-- Ordenar ascendente / descendente -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/filter_order"
+                android:textSize="14sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <!-- Ascendente -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_ascending"
+                    style="@style/ChipButton"
+                    android:checked="true"
+                    android:tag="@string/tag_ascending"
+                    android:text="@string/filter_ascending" />
+
+                <!-- Descendente -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_descending"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_descending"
+                    android:text="@string/filter_descending" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--  Lista de productos -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_messages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_info"
+            style="@style/InfoTextView"
+            android:text="@string/info_no_messages"
+            android:visibility="gone"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:fillViewport="true"
+    tools:context=".ui.product.search.SearchProductFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="77sp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_search_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textColorHint="@color/gray"
+            app:boxStrokeColor="@color/bazaar"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:endIconCheckable="false"
+            app:endIconContentDescription="@string/et_search_product"
+            app:endIconDrawable="@drawable/ic_search"
+            app:endIconMode="custom"
+            app:hintTextColor="@color/bazaar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_search_product"
+                style="@style/FormEditText"
+                android:background="@drawable/custom_linear_layout"
+                android:hint="@string/et_search_product"
+                android:imeOptions="actionSearch"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_errors"
+            style="@style/ErrorTextView"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:padding="12dp"
+            tools:text="@string/error_title" />
+
+        <!-- Categorías -->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TitleSection"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dp"
+            android:text="@string/categories"
+            android:textSize="17sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <!--  Filtrar -->
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/btn_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/filter"
+            android:src="@drawable/ic_filter"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <!-- Filtrar por estado -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/filter_state"
+                android:textSize="14sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_statuses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <!-- Todos -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_all_statuses"
+                    style="@style/ChipButton"
+                    android:checked="true"
+                    android:tag="@string/tag_all"
+                    android:text="@string/filter_all" />
+
+                <!-- En promoción -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_promo"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_promo"
+                    android:text="@string/filter_promo" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Ordenar por precio / valoración ascendente / descendente -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/filter_order"
+                android:textSize="14sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <!-- Precio ascendente -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_price_ascending"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_price_ascending"
+                    android:text="@string/filter_price_ascending" />
+
+                <!-- Precio descendente -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_price_descending"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_price_descending"
+                    android:text="@string/filter_price_descending" />
+
+                <!-- Valoración ascendente -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_rating_ascending"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_rating_ascending"
+                    android:text="@string/filter_rating_ascending" />
+
+                <!-- Valoración descendente -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_rating_descending"
+                    style="@style/ChipButton"
+                    android:tag="@string/tag_rating_descending"
+                    android:text="@string/filter_rating_descending" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            style="@style/Line"
+            android:layout_marginBottom="15dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_results"
+            style="@style/TitleSection"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dp"
+            android:textSize="17sp"
+            tools:text="@string/search_results" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_info"
+            style="@style/InfoTextView"
+            android:text="@string/search_info_no_products"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

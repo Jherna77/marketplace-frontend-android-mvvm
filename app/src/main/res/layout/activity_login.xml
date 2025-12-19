@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.auth.LoginActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_app" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/app_name"
+        android:fontFamily="@font/curlzmt"
+        android:textColor="@color/bazaar"
+        android:textSize="47sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="23dp"
+        app:srcCompat="@drawable/img_logo"
+        android:layout_gravity="center" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/custom_linear_layout"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- Pedir correo electrónico -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/FormTextInputLayout" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email"
+                style="@style/FormEditText"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="5dp"
+                android:hint="@string/email_et"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Pedir contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/FormTextInputLayout"
+            app:endIconMode="password_toggle" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                style="@style/FormEditText"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="5dp"
+                android:hint="@string/password_et"
+                android:inputType="textPassword"
+                app:passwordToggleEnabled="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_errors"
+        style="@style/ErrorTextView"
+        android:layout_marginBottom="33dp"
+        tools:text="@string/error_title" />
+
+    <!-- Botón acceder-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        style="@style/PrimaryButton"
+        android:layout_marginBottom="7dp"
+        android:text="@string/login_btn" />
+
+    <!-- Crear cuenta -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/register"
+        style="@style/SecondaryButton"
+        android:text="@string/register_tv"
+        android:textSize="17sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.messages.detail.MessageDetailActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_app" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_message_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="11dp"
+            android:background="@drawable/custom_linear_layout"
+            android:orientation="vertical"
+            android:padding="7dp">
+
+            <!-- Fecha del mensaje -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_message_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/mulish"
+                android:textSize="15sp"
+                tools:text="@string/message_date_tv" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Contenido del mensaje-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/message_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish"
+            android:padding="17dp"
+            android:textSize="17sp"
+            tools:text="@tools:sample/lorem[23]" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>

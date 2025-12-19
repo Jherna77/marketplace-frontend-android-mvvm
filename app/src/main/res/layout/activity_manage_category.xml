@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.category.manage.ManageCategoryActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_app" />
+
+    <!-- Nombre de la categoría -->
+    <com.google.android.material.textfield.TextInputLayout style="@style/FormTextInputLayout">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_category_name"
+            style="@style/FormEditText"
+            android:layout_margin="15dp"
+            android:drawableStart="@drawable/ic_categories"
+            android:drawablePadding="10dp"
+            android:hint="@string/category_name_et"
+            android:inputType="textCapSentences" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="47dp">
+
+        <!-- Imagen de la categoría -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/category_image"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_image" />
+
+        <!-- Añadir imagen -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/add_image"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@id/category_image"
+            android:padding="10dp"
+            android:src="@drawable/img_add"
+            android:visibility="gone" />
+
+        <!-- Eliminar imagen -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/remove_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignEnd="@id/category_image"
+            android:padding="10dp"
+            android:src="@drawable/img_remove"
+            android:visibility="gone" />
+
+    </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_errors"
+        style="@style/ErrorTextView"
+        tools:text="@string/error_title" />
+
+    <!-- Botón "Añadir / actualizar categoría" -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save_category"
+        style="@style/PrimaryButton"
+        android:layout_marginBottom="7dp"
+        tools:text="@string/add_category" />
+
+    <!-- Botón "Deshabilitar categoría" -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_disable_category"
+        style="@style/PrimaryButton"
+        android:backgroundTint="@color/errorColor"
+        android:text="@string/disable_category"
+        android:visibility="gone" />
+
+    <!-- Botón "Habilitar categoría" -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_enable_category"
+        style="@style/PrimaryButton"
+        android:layout_marginBottom="7dp"
+        android:backgroundTint="@color/green"
+        android:text="@string/enable_category"
+        android:visibility="gone" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
